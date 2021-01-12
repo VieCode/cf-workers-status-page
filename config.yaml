@@ -20,8 +20,8 @@ monitors:
     url: 'https://www.viecode.com/support/'
     method: GET
     expectStatus: 200
-  - id: webmail
+  - id: mail
     name: VieCode Mail Server
-    url: 'https://webmail.viecode.com/'
+    url: 'https://mail.viecode.com/'
     method: GET
-    expectStatus: 200
+    expectStatus: 400
