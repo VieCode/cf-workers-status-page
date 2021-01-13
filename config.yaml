@@ -1,7 +1,7 @@
 settings:
-  title: 'VieCode Server Monitoring'
+  title: 'Server Monitoring'
   url: 'https://status.viecode.com' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
+  logo: logo.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: false # experimental feature, enable only for <5 monitors or on paid plans
 
@@ -15,6 +15,11 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
+  - id: server
+    name: Server Management
+    url: 'https://server.viecode.com/'
+    method: GET
+    expectStatus: 400
   - id: support
     name: VieCode Support
     url: 'https://www.viecode.com/support/'
@@ -25,3 +30,18 @@ monitors:
     url: 'https://mail.viecode.com/'
     method: GET
     expectStatus: 400
+  - id: demo
+    name: VieCode Demo System
+    url: 'https://demo.viecode.com/'
+    method: GET
+    expectStatus: 302
+  - id: cls_community
+    name: cls-design Community
+    url: 'https://www.cls-design.com/'
+    method: GET
+    expectStatus: 200
+  - id: cls_ws3_demo
+    name: cls-design WSC3 Demo
+    url: 'https://demo.ws3.cls-design.com/'
+    method: GET
+    expectStatus: 200
