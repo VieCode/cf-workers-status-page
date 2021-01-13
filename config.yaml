@@ -19,7 +19,7 @@ monitors:
     name: Server Management
     url: 'https://server.viecode.com/'
     method: GET
-    expectStatus: 400
+    expectStatus: 302
   - id: support
     name: VieCode Support
     url: 'https://www.viecode.com/support/'
